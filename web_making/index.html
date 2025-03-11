@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <title>GPU Store</title>
+  <link rel="stylesheet" href="gpu.css">
+</head>
+<body>
+  <header>
+    <div id = "o"></div>
+    <h1>GPU Store</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="cpu.html">CPU</a></li>
+        <li><a href="laptop.html">Laptop</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Available GPUs</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="rtx3090.jpg" alt="NVIDIA RTX 3090">
+          <h3>NVIDIA RTX 3090</h3>
+          <ul>
+            <li>Process node: 8nm</li>
+            <li>Transistor: 28.3 billion</li>
+            <li>CUDA cores: 10,496</li>
+            <li>Tensor cores: 328 (3rd gen)</li>
+            <li>RT cores: 82 (2nd gen)</li>
+            <li>Base clock: 1395 MHz</li>
+            <li>Boost clock: 1695 MHz</li>
+            <li>TFLOPS</li>
+            <li>Memory type: GDDR6X</li>
+            <li>Capacity: 24GB</li>
+            <li>Bus width: 384-bit</li>
+            <li>Memory bandwidth: 936 GB/s</li>
+            <li>Memory speed: 19.5 Gbps</li>
+            <li>TDP: 350W</li>
+            <li>Recommended PSU: 750W</li>
+          </ul>
+          <p>Price: $1,499</p>
+          <button onclick="addToCart('NVIDIA RTX 3090', 1499)">Add to Cart</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="rx7900.jpg" alt="AMD Radeon RX 7900 XT">
+          <h3>AMD Radeon RX 7900 XT</h3>
+          <ul>
+            <li>Process node: 5nm (for GCD) + 6nm (for MCD)</li>
+            <li>Transistor: 57.7 billion</li>
+            <li>Compute Units: 84</li>
+            <li>Stream Processors: 5376</li>
+            <li>Ray Accelator: 84 (1 per CU)</li>
+            <li>Base clock: 1500 MHz</li>
+            <li>Game clock: 2000 MHz</li>
+            <li>Boost clock: 2400 MHz</li>
+            <li>TFLOPS</li>
+            <li>Memory type: GDDR6</li>
+            <li>Capacity: 20GB</li>
+            <li>Bus width: 320-bit</li>
+            <li>Memory bandwidth: 800 GB/s</li>
+            <li>Infinity cache: 80MB</li>
+            <li>TBP: 300W</li>
+            <li>Recommended PSU: 750W</li>
+          </ul>
+          <p>Price: $899</p>
+          <button onclick="addToCart('AMD Radeon RX 7900 XT', 899)">Add to Cart</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="gtx1660.png" alt="NVIDIA GTX 1660 Ti">
+          <h3>NVIDIA GTX 1660 Ti</h3>
+          <ul>
+            <li>Process node: 12nm</li>
+            <li>Transistor: 6.6 billion</li>
+            <li>CUDA cores: 1536</li>
+            <li>Base clock: 1500 MHz</li>
+            <li>Boost clock: 1770 MHz</li>
+            <li>TFLOPS</li>
+            <li>Memory type: GDDR6</li>
+            <li>Capacity: 6GB</li>
+            <li>Bus width: 192-bit</li>
+            <li>Memory bandwidth: 288 GB/s</li>
+            <li>Memory speed: 12 Gbps</li>
+            <li>TDP: 120W</li>
+            <li>Recommended PSU: 450W</li>
+          </ul>
+          <p>Price: $249</p>
+          <button onclick="addToCart('NVIDIA GTX 1660 Ti', 249)">Add to Cart</button>
+        </div>
+        <!--Product 4-->
+        <div class="product-card">
+          <img src="1080ti.jpg" alt="NVIDIA GTX 1080 Ti">
+          <h3>NVIDIA GTX 1080 Ti</h3>
+          <ul>
+            <li>Process node: 16nm</li>
+            <li>Transistor: 11.8 billion</li>
+            <li>CUDA cores: 3584</li>
+            <li>Base clock: 1480 MHz</li>
+            <li>Boost clock: 1582 MHz</li>
+            <li>TFLOPS</li>
+            <li>Memory type: GDDR5X</li>
+            <li>Capacity: 11GB</li>
+            <li>Bus width: 352-bit</li>
+            <li>Memory bandwidth: 484 GB/s</li>
+            <li>Memory speed: 11 Gbps</li>
+            <li>TDP: 250W</li>
+            <li>Recommended PSU: 600W</li>
+          </ul>
+          <p>Price: $149</p>
+          <button onclick="addToCart('NVIDIA GTX 1080 Ti', 149)">Add to Cart</button>
+        </div>
+        <!--Product 5-->
+        <div class="product-card">
+          <img src="rtx4090.jpeg" alt="NVIDIA RTX 4090">
+          <h3>NVIDIA RTX 4090</h3>
+          <ul>
+            <li>Process node: 4nm</li>
+            <li>Transistor: 76.3 billion</li>
+            <li>CUDA cores: 16,384</li>
+            <li>Tensor cores: 568 (4th gen)</li>
+            <li>RT cores: 191 (3rd gen)</li>
+            <li>Base clock: 2235 MHz</li>
+            <li>Boost clock: 2520 MHz</li>
+            <li>TFLOPS</li>
+            <li>Memory type: GDDR6X</li>
+            <li>Capacity: 24GB</li>
+            <li>Bus width: 384-bit</li>
+            <li>Memory bandwidth: 1008 GB/s</li>
+            <li>Memory speed: 21 Gbps</li>
+            <li>TDP: 450W</li>
+            <li>Recommended PSU: 850W</li>
+          </ul>
+          <p>Price: $1549</p>
+          <button onclick="addToCart('NVIDIA RTX 4090', 1549)">Add to Cart</button>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card">
+          <img src="atiradeon2400xt.jpeg" alt="ATI Radeon 2400 XT">
+          <h3>ATI Radeon 2400 XT</h3>
+          <ul>
+            <li>Process node: 65nm</li>
+            <li>Transistor: 180 million</li>
+            <li>Stream Processor: 40</li>
+            <li>Core clock: 700MHz</li>
+            <li>Memory type: GDDR3</li>
+            <li>Capacity: 512MB</li>
+            <li>Bus width: 64-bit</li>
+            <li>Memory bandwidth: 12.8 GB/s</li>
+            <li>Memory speed: 1.6 Gbps</li>
+            <li>TDP: 25W</li>
+          </ul>
+          <p>Price: $119</p>
+          <button onclick="addToCart('ATI Radeon 2400 XT', 119)">Add to Cart</button>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card">
+          <img src="gt710nvidia.jpeg" alt="NVIDIA GeForce GT 710">
+          <h3>NVIDIA GeForce GT 710</h3>
+          <ul>
+            <li>Process node: 28nm</li>
+            <li>Transistor: 192 million</li>
+            <li>CUDA cores: 192</li>
+            <li>Base clock: 1000 MHz</li>
+            <li>Boost clock: 1150 MHz</li>
+            <li>Memory type: DDR3</li>
+            <li>Capacity: 2GB</li>
+            <li>Bus width: 64-bit</li>
+            <li>Memory bandwidth: 14.4 GB/s</li>
+            <li>Memory speed: 1800 MHz</li>
+            <li>TDP: 19W</li>
+          </ul>
+          <p>Price: $149</p>
+          <button onclick="addToCart('NVIDIA GeForce GT 710', 149)">Add to Cart</button>
+        </div>
+        <!--Product 8-->
+        <div class="product-card">
+          <img src="g100nvidia.jpeg" alt="NVIDIA GeForce G100">
+          <h3>NVIDIA GeForce G100</h3>
+          <ul>
+            <li>Process node: 65nm</li>
+            <li>Transistor: 72 million</li>
+            <li>CUDA cores: 16</li>
+            <li>Base clock: 450 MHz</li>
+            <li>Boost clock: 800 MHz</li>
+            <li>Memory type: DDR2</li>
+            <li>Capacity: 256MB</li>
+            <li>Bus width: 64-bit</li>
+            <li>TDP: 30W</li>
+          </ul>
+          <p>Price: $89</p>
+          <button onclick="addToCart('NVIDIA GeForce G100', 89)">Add to Cart</button>
+        </div>
+        <!--Product 9-->
+        <div class="product-card">
+          <img src="gts250nvidia.jpeg" alt="NVIDIA GeForce GTS250">
+          <h3>NVIDIA GeForce GTS250</h3>
+          <ul>
+            <li>Process node: 55nm</li>
+            <li>Transistor: 1.4 billion</li>
+            <li>CUDA cores: 128</li>
+            <li>Base clock: 738 MHz</li>
+            <li>Shader clock: 1836 MHz</li>
+            <li>Memory clock: 1100MHz</li>
+            <li>Memory type: GDDR3</li>
+            <li>Capacity: 1GB</li>
+            <li>Bus width: 256-bit</li>
+            <li>Memory bandwidth: 51.2 GB/s</li>
+            <li>Memory speed: 1100 MHz</li>
+            <li>TDP: 150W</li>
+            <li>Recommended PSU: 750W</li>
+          </ul>
+          <p>Price: $99</p>
+          <button onclick="addToCart('NVIDIA GeForce GTS250', 99)">Add to Cart</button>
+        </div>
+        <!--Product 10-->
+        <div class="product-card">
+          <img src="gtx580nvidia.jpeg" alt="NVIDIA GeForce GTX 580">
+          <h3>NVIDIA GeForce GTX 580</h3>
+          <ul>
+            <li>Process node: 40nm</li>
+            <li>Transistor: 3 billion</li>
+            <li>CUDA cores: 512</li>
+            <li>Base clock: 772 MHz</li>
+            <li>Shader clock: 1544 MHz</li>
+            <li>Memory clock: 1002 MHz</li>
+            <li>Memory type: GDDR5</li>
+            <li>Capacity: 1.5GB</li>
+            <li>Bus width: 384-bit</li>
+            <li>Memory bandwidth: 192.4 GB/s</li>
+            <li>Memory speed: 1002 MHz</li>
+            <li>TDP: 244W</li>
+          </ul>
+          <p>Price: $129</p>
+          <button onclick="addToCart('NVIDIA GeForce GTX 580', 129)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: $0</p>
+      <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </section>
+
+    <section id="billing-info" class="hidden">
+      <h2>Billing Information</h2>
+      <form id="billing-form" onsubmit="submitOrder(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    
+        <!-- Payment Method Selection -->
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" onchange="togglePaymentFields()" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="cod">Cash on Delivery (COD)</option>
+        </select>
+    
+        <!-- Credit Card Fields -->
+        <div id="credit-card-fields">
+          <label for="card">Card Number:</label>
+          <input type="text" id="card" name="card" minlength="16" maxlength="16">
+    
+          <label for="expiry">Expiry Date:</label>
+          <input type="month" id="expiry" name="expiry">
+    
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" minlength="3" maxlength="3">
+        </div>
+    
+        <button type="submit">Submit Payment</button>
+      </form>
+    </section>    
+
+    <section id="order-confirmation" class="hidden">
+      <h2>Order Confirmation</h2>
+      <p id="confirmation-message"></p>
+      <button onclick="clearOrder()">Clear Order</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class = "top">
+      <a href = "#o"><i class='bx bx-caret-up-circle bx-flip-horizontal bx-tada'></i></a>
+  </div>
+    <center><p>&copy; 2024 GPU Store. All rights reserved.</p></center>
+  </footer>
+
+  <script src="gpu.js"></script>
+</body>
+</html>

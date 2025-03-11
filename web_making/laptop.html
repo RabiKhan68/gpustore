@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <title>GPU Store</title>
+  <link rel="stylesheet" href="gpu.css">
+</head>
+<body>
+  <header>
+    <div id = "o"></div>
+    <h1>GPU Store</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="gpuweb.html">GPU</a></li>
+        <li><a href="cpu.html">CPU</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Available Laptops</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="inspiron153000.jpeg" alt="Dell Inspiron 15 3000">
+            <h3>Dell Inspiron 15 3000</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i3-1115G4 11th Gen</li>
+              <li>RAM: 8GB DDR4</li>
+              <li>Storage: 256GB SSD</li>
+              <li>Display: 15.6" FHD</li>
+              <li>GPU: Integrated Intel UHD Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $299</p>
+            <button onclick="addToCart('Dell Inspiron 15 3000', 299)">Add to Cart</button>
+          </div>          
+        <!-- Product 2 -->
+        <div class="product-card">
+            <img src="inspiron165000.jpeg" alt="Dell Inspiron 16 5620">
+            <h3>Dell Inspiron 16 5620</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i7-1255U 12th Gen</li>
+              <li>RAM: 16GB DDR4</li>
+              <li>Storage: 512GB SSD</li>
+              <li>Display: 16" QHD</li>
+              <li>GPU: NVIDIA GeForce MX450</li>
+            </ul>
+            <p><strong>Price:</strong> $539</p>
+            <button onclick="addToCart('Dell Inspiron 16 5620', 539)">Add to Cart</button>
+          </div>
+        <!-- Product 3 -->
+        <div class="product-card">
+            <img src="latitude5430.jpeg" alt="Dell Latitude 5430">
+            <h3>Dell Latitude 5430</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i5-1235U 12th Gen</li>
+              <li>RAM: 16GB DDR4</li>
+              <li>Storage: 1TB SSD</li>
+              <li>Display: 14" FHD</li>
+              <li>GPU: Integrated Intel Iris Xe Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $599</p>
+            <button onclick="addToCart('Dell Latitude 5430', 599)">Add to Cart</button>
+          </div>
+        <!--Product 4-->
+        <div class="product-card">
+          <img src="latitude7480.jpeg" alt="Dell Latitude 7480">
+          <h3>Dell Latitude 7480</h3>
+          <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i7-7600U 7th Gen</li>
+              <li>RAM: 8GB DDR4</li>
+              <li>Storage: 256GB M.2 SSD</li>
+              <li>Display: 14" FHD</li>
+              <li>GPU: Integrated Intel UHD Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $759</p>
+          <button onclick="addToCart('Dell Latitude 7480', 759)">Add to Cart</button>
+        </div>
+        <!--Product 5-->
+        <div class="product-card">
+          <img src="xps13.jpeg" alt="Dell XPS 13 Plus">
+          <h3>Dell XPS 13 Plus</h3>
+          <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i7-P series 12th Gen</li>
+              <li>RAM: 32GB LPDDR5</li>
+              <li>Storage: 2TB M.2 SSD</li>
+              <li>Display: 13.4" FHD</li>
+              <li>GPU: Integrated Intel Iris Xe Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $819</p>
+          <button onclick="addToCart('Dell XPS 13 Plus', 819)">Add to Cart</button>
+        </div>
+        <!--Product 6-->
+        <div class="product-card">
+            <img src="xps159520.jpeg" alt="Dell XPS 15 9520">
+            <h3>Dell XPS 15 9520</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i9-12900HK 12th Gen</li>
+              <li>RAM: 64GB DDR5</li>
+              <li>Storage: 4TB PCIe M.2 SSD</li>
+              <li>Display: 15.6" 5K</li>
+              <li>GPU: Integrated Intel Iris Xe Graphics with NVIDIA GeForce RTX 3050Ti</li>
+            </ul>
+            <p><strong>Price:</strong> $1299</p>
+            <button onclick="addToCart('Dell XPS 15 9520', 1299)">Add to Cart</button>
+          </div>
+        <!--Product 7-->
+        <div class="product-card">
+            <img src="vostro3510.jpeg" alt="Dell Vostro 3510">
+            <h3>Dell Vostro 3510</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i5-1165G7 11th Gen</li>
+              <li>RAM: 8GB DDR4</li>
+              <li>Storage: 256GB PCIe NVMe SSD</li>
+              <li>Display: 15.6" FHD</li>
+              <li>GPU: Integrated Intel Iris Xe Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $399</p>
+            <button onclick="addToCart('Dell Vostro 3510', 399)">Add to Cart</button>
+          </div>
+        <!--Product 8-->
+        <div class="product-card">
+            <img src="vostro5620.jpeg" alt="Dell Vostro 5620">
+            <h3>Dell Vostro 5620</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Intel Core i7-1260P 12th Gen</li>
+              <li>RAM: 16GB DDR4</li>
+              <li>Storage: 512GB PCIe NVMe SSD</li>
+              <li>Display: 16" FHD+</li>
+              <li>GPU: Integrated Intel Iris Xe Graphics</li>
+            </ul>
+            <p><strong>Price:</strong> $459</p>
+            <button onclick="addToCart('Dell Vostro 5620', 459)">Add to Cart</button>
+          </div> 
+          <!--Product 9-->
+        <div class="product-card">
+          <img src="chromebook3100.jpeg" alt="Dell Chromebook 3100">
+          <h3>Dell Chromebook 3100</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Celeron N4020</li>
+            <li>RAM: 4GB LPDDR4</li>
+            <li>Storage: 64GB eMMC</li>
+            <li>Display: 11.6" HD+</li>
+            <li>GPU: Integrated Intel UHD Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $159</p>
+          <button onclick="addToCart('Dell Chromebook 3100', 159)">Add to Cart</button>
+        </div>
+        <!--Product 10-->
+        <div class="product-card">
+          <img src="hppavilion15.jpeg" alt="HP Pavilion 15">
+          <h3>HP Pavilion 15</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: AMD Ryzen 7 7730U</li>
+            <li>RAM: 16GB DDR4</li>
+            <li>Storage: 512GB SSD</li>
+            <li>Display: 15.6" FHD</li>
+            <li>GPU: Integrated AMD Radeon Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $269</p>
+          <button onclick="addToCart('HP Pavilion 15', 269)">Add to Cart</button>
+        </div>     
+        <!--Product 11-->
+        <div class="product-card">
+          <img src="hpspectre16.jpeg" alt="HP Spectre 16">
+          <h3>HP Spectre 16</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Core Ultra 7 155H</li>
+            <li>RAM: 32GB LPDDR5</li>
+            <li>Storage: 2TB PCIe NVMe SSD</li>
+            <li>Display: 16" WQXGA</li>
+            <li>GPU: Integrated Intel Iris Xe Graphics</li>
+            <li>GPU: (optional) GeForce RTX 4050</li>
+          </ul>
+          <p><strong>Price:</strong> $419</p>
+          <button onclick="addToCart('HP Spectre 16', 419)">Add to Cart</button>
+        </div> 
+        <!--Product 12-->
+        <div class="product-card">
+          <img src="hpenvyx360.jpeg" alt="HP Envy x360 14">
+          <h3>HP Envy x360 14</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Core Ultra 7</li>
+            <li>RAM: 32GB LPDDR4</li>
+            <li>Storage: 1TB PCIe Gen 4 NVMe SSD</li>
+            <li>Display: 14" 3K</li>
+            <li>GPU: Integrated Intel Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $699</p>
+          <button onclick="addToCart('HP Envy x360 14', 699)">Add to Cart</button>
+        </div> 
+        <!--Product 13-->
+        <div class="product-card">
+          <img src="dellinspiron11.jpeg" alt="Dell Inspiron 11 3000">
+          <h3>Dell Inspiron 11 3000</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Celeron N3050</li>
+            <li>RAM: 2GB DDR3L</li>
+            <li>Storage: 32GB eMMC</li>
+            <li>Display: 11" HD+</li>
+            <li>GPU: Integrated Intel HD Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $119</p>
+          <button onclick="addToCart('Dell Inspiron 11 3000', 119)">Add to Cart</button>
+        </div> 
+        <!--Product 14-->
+        <div class="product-card">
+          <img src="delllatitude3190.jpeg" alt="Dell Latitude 3190 (Education Model)">
+          <h3>Dell Latitude 3190 (Education model)</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Pentium Silver N5030</li>
+            <li>RAM: 4GB DDR4</li>
+            <li>Storage: 64GB eMMC</li>
+            <li>Display: 11.6" HD+</li>
+            <li>GPU: Integrated Intel UHD Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $139</p>
+          <button onclick="addToCart('Dell Latitude 3190 (Education model)', 139)">Add to Cart</button>
+        </div> 
+        <!--Product 15-->
+        <div class="product-card">
+          <img src="hpstream11.jpeg" alt="HP Stream 11">
+          <h3>HP Stream 11</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Celeron N4000</li>
+            <li>RAM: 4GB DDR4</li>
+            <li>Storage: 32GB eMMC</li>
+            <li>Display: 11.6" HD+</li>
+            <li>GPU: Integrated UHD Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $99</p>
+          <button onclick="addToCart('HP Stream 11', 99)">Add to Cart</button>
+        </div> 
+        <!--Product 16-->
+        <div class="product-card">
+          <img src="hpdb0020nr.jpeg" alt="HP 14-db0020nr (Chromebook)">
+          <h3>HP 14-db0020nr (Chromebook)</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: AMD A4-9120C APU</li>
+            <li>RAM: 4GB DDR4</li>
+            <li>Storage: 32GB eMMC</li>
+            <li>Display: 16" HD+</li>
+            <li>GPU: AMD Radeon R4 Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $119</p>
+          <button onclick="addToCart('HP 14-db0020nr (Chromebook)', 119)">Add to Cart</button>
+        </div>
+        <!--Product 17-->
+        <div class="product-card">
+          <img src="HPChromebook14-14a.jpeg" alt="HP Chromebook 14 14a-na0000">
+          <h3>HP Chromebook 14 14a-na0000</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Pentium Silver N5030</li>
+            <li>RAM: 8GB LPDDR4</li>
+            <li>Storage: 128GB eMMC</li>
+            <li>Display: 14" FHD</li>
+            <li>GPU: Integrated Intel UHD 600 Graphics</li>
+          </ul>
+          <p><strong>Price:</strong> $159</p>
+          <button onclick="addToCart('HP Chromebook 14 14a-na0000', 159)">Add to Cart</button>
+        </div>
+        <!--Product 18-->
+        <div class="product-card">
+          <img src="macbook2015.jpeg" alt="Apple MacBook 2015">
+          <h3>Apple MacBook 2015</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Core M 1.3GHz</li>
+            <li>RAM: 8GB LPDDR3</li>
+            <li>Storage: 512GB SSD</li>
+            <li>Display: 12" 3K</li>
+            <li>GPU: Integrated Intel HD Graphics 5300</li>
+          </ul>
+          <p><strong>Price:</strong> $339</p>
+          <button onclick="addToCart('Apple MacBook 2015', 339)">Add to Cart</button>
+        </div>
+        <!--Product 19-->
+        <div class="product-card">
+          <img src="macbookairm1.jpeg" alt="MacBook air 2020">
+          <h3>Apple MacBook air 2020</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Apple M1</li>
+            <li>RAM: 16GB unified memory</li>
+            <li>Storage: 2TB SSD</li>
+            <li>Display: 13.3" 3K</li>
+            <li>GPU: Apple GPU 8 cores</li>
+          </ul>
+          <p><strong>Price:</strong> $449</p>
+          <button onclick="addToCart('Apple MacBook air 2020', 449)">Add to Cart</button>
+        </div> 
+        <!--Product 20-->
+        <div class="product-card">
+          <img src="xps159520.jpeg" alt="Dell XPS 16">
+          <h3>Dell XPS 16</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Intel Core Ultra 9 185H</li>
+            <li>RAM: 64GB LPDDR5x</li>
+            <li>Storage: 4TB PCIe Gen 4 SSD</li>
+            <li>Display: 16.3" 4K+</li>
+            <li>GPU: NVIDIA RTX 4070</li>
+          </ul>
+          <p><strong>Price:</strong> $4999</p>
+          <button onclick="addToCart('Dell XPS 16', 4999)">Add to Cart</button>
+        </div>
+        <!--Product 21-->
+        <div class="product-card">
+          <img src="macbookprom4.jpeg" alt="MacBook Pro 2024">
+          <h3>Apple MacBook Pro 2024</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Apple M4</li>
+            <li>RAM: 24GB unified memory</li>
+            <li>Storage: 2TB SSD</li>
+            <li>Display: 14.2" 3K</li>
+            <li>GPU: Apple GPU 10 cores</li>
+          </ul>
+          <p><strong>Price:</strong> $5399</p>
+          <button onclick="addToCart('Apple MacBook Pro 2024', 5399)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: $0</p>
+      <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </section>
+
+    <section id="billing-info" class="hidden">
+      <h2>Billing Information</h2>
+      <form id="billing-form" onsubmit="submitOrder(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    
+        <!-- Payment Method Selection -->
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" onchange="togglePaymentFields()" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="cod">Cash on Delivery (COD)</option>
+        </select>
+    
+        <!-- Credit Card Fields -->
+        <div id="credit-card-fields">
+          <label for="card">Card Number:</label>
+          <input type="text" id="card" name="card" minlength="16" maxlength="16">
+    
+          <label for="expiry">Expiry Date:</label>
+          <input type="month" id="expiry" name="expiry">
+    
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" minlength="3" maxlength="3">
+        </div>
+    
+        <button type="submit">Submit Payment</button>
+      </form>
+    </section> 
+
+    <section id="order-confirmation" class="hidden">
+      <h2>Order Confirmation</h2>
+      <p id="confirmation-message"></p>
+      <button onclick="clearOrder()">Clear Order</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class = "top">
+      <a href = "#o"><i class='bx bx-caret-up-circle bx-flip-horizontal bx-tada'></i></a>
+  </div>
+    <center><p>&copy; 2024 GPU Store. All rights reserved.</p></center>
+  </footer>
+
+  <script src="gpu.js"></script>
+</body>
+</html>
