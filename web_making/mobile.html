@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <title>GPU Store</title>
+  <link rel="stylesheet" href="gpu.css">
+</head>
+<body>
+  <header>
+    <div id = "o"></div>
+    <h1>GPU Store</h1>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="index.html">GPU</a></li>
+        <li><a href="cpu.html">CPU</a></li>
+        <li><a href="laptop.html">Laptop</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="products">
+      <h2>Available Mobiles</h2>
+      <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+            <img src="Oneplus9.jpeg" alt="Oneplus 9 5g T-mobile">
+            <h3>Oneplus 9 5g T-mobile</h3>
+            <p><strong>Specifications:</strong></p>
+            <ul>
+              <li>Processor: Snapdragon 888 5g</li>
+              <li>RAM: 8GB LPDDR4x</li>
+              <li>Storage: 128GB UFS 3.1</li>
+              <li>Display: 6.55" FHD, indisplay optical, AMOLED, 120Hz</li>
+              <li>GPU: Adreno 660</li>
+              <li>Camera: 48 MP (wide)</li>
+              <li>Camera: 50 MP (ultrawide)</li>
+              <li>Camera: 2 MP (monochrome)</li>
+              <li>Camera (front): 16 MP</li>
+              <li>Video back: Upto 8K 30fps, 4K 30/60fps, 1080p 30/60/240fps gyro EIS</li>
+              <li>Video front: Upto 1080p 30fps gyro EIS</li>
+              <li>USB: USB Type C 3.1</li>
+              <li>Design and materials: Glass back (Gorilla glass 5), Glass front (Gorilla glass 5), plastic frame</li>
+              <li>Battery: 4500mAh, 65W wired, 15W wireless</li>
+              <li>Speakers: Stereo</li>
+              <li>Features: Single-sim, IP-68(T-mobile)</li>
+            </ul>
+            <p><strong>Price:</strong> $169</p>
+            <button onclick="addToCart('Oneplus 9 5g T-mobile', 169)">Add to Cart</button>
+          </div>          
+       <!-- Product 2 -->
+       <div class="product-card">
+        <img src="samsungs21fe.jpeg" alt="Samsung Galaxy S21 Fe 5g">
+        <h3>Samsung Galaxy S21 Fe 5g</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Exynos 2100</li>
+          <li>RAM: 6GB LPDDR5</li>
+          <li>Storage: 256GB UFS 3.1</li>
+          <li>Display: 6.4" FHD, indisplay optical, Dynamic AMOLED 2X, 120Hz</li>
+          <li>GPU: Mali G78 MP14</li>
+          <li>Camera: 12 MP (wide)</li>
+          <li>Camera: 8 MP (telephoto)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera (front): 32 MP</li>
+          <li>Video back: Upto 4K 30/60fps, 1080p 30/60/240fps OIS</li>
+          <li>Video front: Upto 4K 30/60fps, 1080p 30/60fps gyro EIS</li>
+          <li>USB: USB Type C</li>
+          <li>Design and materials: Plastic back, Glass front (Gorilla glass victus), aluminium frame</li>
+          <li>Battery: 4500mAh, 25W wired, 15W wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: Single-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $199</p>
+        <button onclick="addToCart('Samsung Galaxy S21 Fe 5g', 199)">Add to Cart</button>
+      </div>
+        <!-- Product 3 -->
+       <div class="product-card">
+        <img src="iphone11.jpeg" alt="Apple Iphone 11">
+        <h3>Apple Iphone 11</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Apple A13 Bionic</li>
+          <li>RAM: 4GB LPDDR4x</li>
+          <li>Storage: 64GB NVMe</li>
+          <li>Display: 6.1" HD, face id, IPS, 60Hz</li>
+          <li>GPU: Apple GPU</li>
+          <li>Camera: 12 MP (wide)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera (front): 12 MP</li>
+          <li>Video back: Upto 4K 24/30/60fps, 1080p 30/60/120/240fps OIS</li>
+          <li>Video front: Upto 4K 24/30/60fps, 1080p 30/60/120fps gyro EIS</li>
+          <li>USB: Lightning USB 2.0</li>
+          <li>Design and materials: Glass back (Corning-made glass), Glass front (Corning-made glass), aluminium frame</li>
+          <li>Battery: 3110mAh, wired, wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $200</p>
+        <button onclick="addToCart('Apple Iphone 11', 200)">Add to Cart</button>
+      </div>
+       <!-- Product 4 -->
+       <div class="product-card">
+        <img src="iphone13.jpeg" alt="Apple Iphone 13">
+        <h3>Apple Iphone 13</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Apple A15 Bionic</li>
+          <li>RAM: 4GB LPDDR4x</li>
+          <li>Storage: 512GB NVMe</li>
+          <li>Display: 6.1" FHD+, face id, Super Retina XDR OLED, 60Hz</li>
+          <li>GPU: Apple GPU</li>
+          <li>Camera: 12 MP (wide)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera (front): 12 MP</li>
+          <li>Video back: Upto 4K 24/30/60fps, 1080p 30/60/120/240fps OIS</li>
+          <li>Video front: Upto 4K 24/25/30/60fps, 1080p 30/60/120fps gyro EIS</li>
+          <li>USB: Lightning USB 2.0</li>
+          <li>Design and materials: Glass back (Corning-made glass), Glass front (Corning-made glass), aluminium frame</li>
+          <li>Battery: 3240mAh, wired, 15W wireless, 15W wireless Qi2 (requires 17.2 update)</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $300</p>
+        <button onclick="addToCart('Apple Iphone 13', 300)">Add to Cart</button>
+      </div>
+        <!-- Product 5 -->
+       <div class="product-card">
+        <img src="googlepixel7pro.jpeg" alt="Google Pixel 7 Pro">
+        <h3>Google Pixel 7 Pro</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Google Tensor G2</li>
+          <li>RAM: 8GB LPDDR5</li>
+          <li>Storage: 256GB UFS 3.1</li>
+          <li>Display: 6.7" 2K, face unlock, indisplay fingerprint (optical), LTPO AMOLED, 120Hz</li>
+          <li>GPU: Mali G710 MP7</li>
+          <li>Camera: 50 MP (wide)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera: 48 MP (Periscopic telephoto)</li>
+          <li>Camera (front): 10.8 MP</li>
+          <li>Video back: Upto 4K 30/60fps, 1080p 30/60/120/240fps OIS, gyro EIS</li>
+          <li>Video front: Upto 4K 30/60fps, 1080p 30/60fps gyro EIS</li>
+          <li>USB: Type-C 3.2</li>
+          <li>Design and materials: Glass back (Gorilla glass victus), Glass front (Gorilla glass victus), aluminium frame</li>
+          <li>Battery: 5000mAh, wired, wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $240</p>
+        <button onclick="addToCart('Google Pixel 7 Pro', 240)">Add to Cart</button>
+      </div>
+        <!--Product 6-->
+       <div class="product-card">
+        <img src="camon30pro.jpeg" alt="Tecno Camon 30 Pro">
+        <h3>Tecno Camon 30 Pro</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: MediaTek Dimensity 8200 Ultimate</li>
+          <li>RAM: 12GB LPDDR5</li>
+          <li>Storage: 512GB UFS 3.1</li>
+          <li>Display: 6.78" FHD, face unlock, indisplay fingerprint (optical), AMOLED, 144Hz</li>
+          <li>GPU: Mali G610 MC6</li>
+          <li>Camera: 50 MP (wide)</li>
+          <li>Camera: 50 MP (ultrawide)</li>
+          <li>Camera (front): 50 MP</li>
+          <li>Video back: Upto 4K 30/60fps, 1080p 30fps OIS</li>
+          <li>Video front: Upto 4K 30/60fps, 1080p 30fps gyro EIS</li>
+          <li>USB: Type-C 2.0</li>
+          <li>Design and materials: Silicone polymer back, Glass front, plastic frame</li>
+          <li>Battery: 5000mAh, 70W wired</li>
+          <li>Speakers: dual speakers</li>
+          <li>Features: Dual-sim</li>
+        </ul>
+        <p><strong>Price:</strong> $350</p>
+        <button onclick="addToCart('Tecno Camon 30 Pro', 350)">Add to Cart</button>
+      </div>
+        <!--Product 7-->
+       <div class="product-card">
+        <img src="samsunga55.jpeg" alt="Samsung Galaxy A55 5G">
+        <h3>Samsung Galaxy A55 5G</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Exynos 1480</li>
+          <li>RAM: 12GB LPDDR5</li>
+          <li>Storage: 256GB UFS 3.1</li>
+          <li>Display: 6.6" FHD, face unlock, indisplay (optical), Super AMOLED, 120Hz</li>
+          <li>GPU: Xclipse 530</li>
+          <li>Camera: 50 MP (wide)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera: 5 MP (macro)</li>
+          <li>Camera (front): 32 MP</li>
+          <li>Video back: Upto 4K 30fps, 1080p 30/60fps gyro EIS</li>
+          <li>Video front: Upto 4K 30fps, 1080p 30/60fps</li>
+          <li>USB: Type-C 2.0</li>
+          <li>Design and materials: Glass back (Gorilla glass), Glass front (Gorilla glass victus+), aluminium frame</li>
+          <li>Battery: 5000mAh, 25W wired, wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-67</li>
+        </ul>
+        <p><strong>Price:</strong> $300</p>
+        <button onclick="addToCart('Samsung Galaxy A55 5G', 300)">Add to Cart</button>
+      </div>
+        <!--Product 8-->
+       <div class="product-card">
+        <img src="pixel4xl.jpeg" alt="Google Pixel 4xl">
+        <h3>Google Pixel 4xl</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Snapdragon 855</li>
+          <li>RAM: 6GB LPDDR4x</li>
+          <li>Storage: 128GB UFS 2.1</li>
+          <li>Display: 6.3" 2K, face id, P-OLED, 90Hz</li>
+          <li>GPU: Adreno 640</li>
+          <li>Camera: 12.2 MP (wide)</li>
+          <li>Camera: 16 MP (telephoto)</li>
+          <li>Camera (front): 8 MP</li>
+          <li>Video back: Upto 4K 30fps, 1080p 30/60/120fps OIS, gyro EIS</li>
+          <li>Video front: Upto 1080p 30fps gyro EIS</li>
+          <li>USB: Type-C 3.1</li>
+          <li>Design and materials: Glass back (Gorilla glass 5), Glass front (Gorilla glass 5), aluminium frame</li>
+          <li>Battery: 3700mAh, 18W wired, wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $200</p>
+        <button onclick="addToCart('Google Pixel 4xl', 200)">Add to Cart</button>
+      </div> 
+          <!--Product 9-->
+       <div class="product-card">
+        <img src="samsungs24ultra.jpeg" alt="Samsung Galaxy S24 Ultra">
+        <h3>Samsung Galaxy S24 Ultra</h3>
+        <p><strong>Specifications:</strong></p>
+        <ul>
+          <li>Processor: Snapdragon 8 gen 3</li>
+          <li>RAM: 12GB LPDDR5x</li>
+          <li>Storage: 256GB UFS 4.0</li>
+          <li>Display: 6.8" 2K, face unlock, indisplay (ultrasonic), Dynamic LTPO AMOLED 2X, 120Hz</li>
+          <li>GPU: Adreno 750</li>
+          <li>Camera: 200 MP (wide)</li>
+          <li>Camera: 12 MP (ultrawide)</li>
+          <li>Camera: 10 MP (telephoto)</li>
+          <li>Camera: 50 MP (Periscopic telephoto)</li>
+          <li>Camera (front): 12 MP</li>
+          <li>Video back: Upto 8K 24/30fps, 4K 30/60/120fps, 1080p 30/60/240fps OIS, gyro EIS</li>
+          <li>Video front: Upto 4K 30/60fps, 1080p 30fps</li>
+          <li>USB: Type-C 3.2</li>
+          <li>Design and materials: Glass back (Gorilla glass Armour), Glass front (Gorilla glass Armour), titanium frame</li>
+          <li>Battery: 5000mAh, 45W wired, 15W wireless</li>
+          <li>Speakers: Stereo</li>
+          <li>Features: nano-sim and e-sim, IP-68</li>
+        </ul>
+        <p><strong>Price:</strong> $800</p>
+        <button onclick="addToCart('Samsung Galaxy S24 Ultra', 800)">Add to Cart</button>
+      </div>
+        <!--Product 10-->
+        <div class="product-card">
+          <img src="samsunga05.jpeg" alt="Samsung Galaxy A05">
+          <h3>Samsung Galaxy A05</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: MediaTek Helio G85</li>
+            <li>RAM:4GB LPDDR4x</li>
+            <li>Storage: 64GB eMMC 5.1</li>
+            <li>Display: 6.7" 720p, PLS LCD, 60Hz</li>
+            <li>GPU: Mali G52 MC2</li>
+            <li>Camera: 50 MP (wide)</li>
+            <li>Camera: 2 MP (depth)</li>
+            <li>Camera (front): 8 MP</li>
+            <li>Video back: Upto 1080p 30/60fps</li>
+            <li>Video front: Upto 1080p 30/60fps</li>
+            <li>USB: Type-C 2.0</li>
+            <li>Design and materials: Plastic back, Glass front, plastic frame</li>
+            <li>Battery: 5000mAh, 25W wired</li>
+            <li>Speakers: Mono</li>
+            <li>Features: Dual-sim</li>
+          </ul>
+          <p><strong>Price:</strong> $90</p>
+          <button onclick="addToCart('Samsung Galaxy A05', 90)">Add to Cart</button>
+        </div>     
+        <!--Product 11-->
+        <div class="product-card">
+          <img src="oppof21pro.jpeg" alt="Oppo F-21 Pro 5g">
+          <h3>Oppo F-21 Pro 5g</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Snapdragon 695 5G</li>
+            <li>RAM: 8GB LPDDR4x</li>
+            <li>Storage: 128GB UFS 2.2</li>
+            <li>Display: 6.43" 1080p, face unlock, indisplay (optical), AMOLED, 120Hz</li>
+            <li>GPU: Adreno 619</li>
+            <li>Camera: 64 MP (wide)</li>
+            <li>Camera: 2 MP (macro)</li>
+            <li>Camera: 2 MP (depth)</li>
+            <li>Camera (front): 16 MP</li>
+            <li>Video back: Upto 1080p 30fps</li>
+            <li>Video front: Upto 1080p 30fps</li>
+            <li>USB: Type-C 2.0</li>
+            <li>Design and materials: plastic back, Glass front, plastic frame</li>
+            <li>Battery: 4500mAh, 33W wired</li>
+            <li>Speakers: Mono</li>
+            <li>Features: Dual-sim, IP-X4</li>
+          </ul>
+          <p><strong>Price:</strong> $300</p>
+          <button onclick="addToCart('Oppo F-21 Pro 5G', 300)">Add to Cart</button>
+        </div>
+        <!--Product 12-->
+        <div class="product-card">
+          <img src="xiaomi14ultra.jpeg" alt="Xiaomi 14 ultra">
+          <h3>Xiaomi 14 ultra</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Snapdragon 8 gen 3</li>
+            <li>RAM: 16GB LPDDR5x</li>
+            <li>Storage: 1TB UFS 4.0</li>
+            <li>Display: 6.73" 2K, face unlock, indisplay (ultrasonic), LTPO AMOLED, 120Hz</li>
+            <li>GPU: Adreno 750</li>
+            <li>Camera: 50 MP (wide)</li>
+            <li>Camera: 50 MP (ultrawide)</li>
+            <li>Camera: 50 MP (telephoto)</li>
+            <li>Camera: 50 MP (Periscopic telephoto)</li>
+            <li>Camera (front): 32 MP</li>
+            <li>Video back: Upto 8K 24/30fps, 4K 24/30/60/120fps, 1080p 30/60/120/240/480/960/1920fps OIS, gyro EIS</li>
+            <li>Video front: Upto 4K 30/60fps, 1080p 30/60fps</li>
+            <li>USB: Type-C 3.2 Gen 2</li>
+            <li>Design and materials: Eco-Leather back, Glass front (Shield glass), titanium frame (grade 5)</li>
+            <li>Battery: 5000mAh, 90W wired, 80W wireless</li>
+            <li>Speakers: Stereo</li>
+            <li>Features: Dual-sim, IP-68</li>
+          </ul>
+          <p><strong>Price:</strong> $1100</p>
+          <button onclick="addToCart('Xiaomi 14 Ultra', 1100)">Add to Cart</button>
+        </div>
+        <!--Product 13-->
+        <div class="product-card">
+          <img src="camon304g.jpeg" alt="Tecno Camon 30 4g">
+          <h3>Teno Camon 30 4g</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: MediaTek Helio G99 Ultimate</li>
+            <li>RAM: 12GB LPDDR4x</li>
+            <li>Storage: 256GB UFS 2.2</li>
+            <li>Display: 6.78" 1080p, face unlock, indisplay (optical), AMOLED, 120Hz</li>
+            <li>GPU: Mali G57 MC2</li>
+            <li>Camera: 50 MP (wide)</li>
+            <li>Camera: 2 MP (depth)</li>
+            <li>Camera (front): 50 MP</li>
+            <li>Video back: Upto 2K 30fps, 1080p 30/60fps OIS, gyro EIS</li>
+            <li>Video front: Upto 2K 30fps, 1080p 30/60fps</li>
+            <li>USB: Type-C 2.0</li>
+            <li>Design and materials: Glass back, Glass front, plastic frame</li>
+            <li>Battery: 5000mAh, 70W wired</li>
+            <li>Speakers: Stereo</li>
+            <li>Features: Dual-sim, IP-X4</li>
+          </ul>
+          <p><strong>Price:</strong> $180</p>
+          <button onclick="addToCart('Tecno Camon 30 4g', 180)">Add to Cart</button>
+        </div>
+        <!--Product 14-->
+        <div class="product-card">
+          <img src="googlepixel9proxl.jpeg" alt="Google Pixel 9 Pro XL">
+          <h3>Google Pixel 9 Pro XL</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Google Tensor G4</li>
+            <li>RAM: 16GB LPDDR5x</li>
+            <li>Storage: 1TB UFS 3.1</li>
+            <li>Display: 6.8" 2K, face unlock, indisplay (ultrasonic), LTPO OLED, 120Hz</li>
+            <li>GPU: Mali G715 MC7</li>
+            <li>Camera: 50 MP (wide)</li>
+            <li>Camera: 48 MP (ultrawide)</li>
+            <li>Camera: 48 MP (Periscopic telephoto)</li>
+            <li>Camera (front): 42 MP</li>
+            <li>Video back: Upto 8K 30fps, 4K 24/30/60fps, 1080p 24/30/60/120/240fps OIS, gyro EIS</li>
+            <li>Video front: Upto 4K 30/60fps, 1080p 30/60fps</li>
+            <li>USB: Type-C 3.2</li>
+            <li>Design and materials: Glass back (Gorilla glass victus 2), Glass front (Gorilla glass victus 2), aluminium frame</li>
+            <li>Battery: 5060mAh, 37W wired, 12W wireless (Qi-compatible), 23W wireless (Pixel Stand)</li>
+            <li>Speakers: Stereo</li>
+            <li>Features: nano-sim and e-sim, IP-68</li>
+          </ul>
+          <p><strong>Price:</strong> $1100</p>
+          <button onclick="addToCart('Google Pixel 9 Pro XL', 1100)">Add to Cart</button>
+        </div>
+        <!--Product 15-->
+        <div class="product-card">
+          <img src="tecno20pro.jpeg" alt="Tecno Camon 20 Pro 4g">
+          <h3>Tecno Camon 20 Pro 4g</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: MediaTek Helio G99</li>
+            <li>RAM: 8GB LPDDR4x</li>
+            <li>Storage: 256GB UFS 2.1</li>
+            <li>Display: 6.67" 1080p, face unlock, indisplay (optical), AMOLED, 120Hz</li>
+            <li>GPU: Mali G715 MC7</li>
+            <li>Camera: 64 MP (wide)</li>
+            <li>Camera: 2 MP (depth)</li>
+            <li>Camera (front): 32 MP</li>
+            <li>Video back: Upto 2K 30fps, 1080p 30/60fps OIS, gyro EIS</li>
+            <li>Video front: Upto 2K 30fps, 1080p 30/60fps</li>
+            <li>USB: Type-C 2.0</li>
+            <li>Design and materials: Leather back, Glass front, plastic frame</li>
+            <li>Battery: 5000mAh, 33W wired</li>
+            <li>Speakers: Stereo</li>
+            <li>Features: Dual nano-sim, IP-53</li>
+          </ul>
+          <p><strong>Price:</strong> $139</p>
+          <button onclick="addToCart('Tecno Camon 20 pro 4g', 139)">Add to Cart</button>
+        </div>
+        <!--Product 16-->
+        <div class="product-card">
+          <img src="oneplus13.jpeg" alt="Oneplus 13">
+          <h3>Oneplus 13</h3>
+          <p><strong>Specifications:</strong></p>
+          <ul>
+            <li>Processor: Snapdragon 8 Elite</li>
+            <li>RAM: 24GB LPDDR5x</li>
+            <li>Storage: 1TB UFS 4.0</li>
+            <li>Display: 6.82" 2K, face unlock, indisplay (ultrasonic), LTPO AMOLED, 120Hz</li>
+            <li>GPU: Adreno 830</li>
+            <li>Camera: 50 MP (wide)</li>
+            <li>Camera: 50 MP (ultrawide)</li>
+            <li>Camera: 50 MP (Periscopic telephoto)</li>
+            <li>Camera (front): 32 MP</li>
+            <li>Video back: Upto 8K 30fps, 4K 30/60fps, 1080p 30/60/240/480fps OIS, gyro EIS</li>
+            <li>Video front: Upto 4K 30/60fps, 1080p 30/60fps</li>
+            <li>USB: Type-C 3.2</li>
+            <li>Design and materials: Glass back, Glass front (Crystal Shield), aluminium frame</li>
+            <li>Battery: 6000mAh, 100W wired, 50W wireless (Qi-compatible), 23W wireless (Pixel Stand)</li>
+            <li>Speakers: Stereo</li>
+            <li>Features: Single-sim, IP-69</li>
+          </ul>
+          <p><strong>Price:</strong> $599</p>
+          <button onclick="addToCart('Oneplus 13', 599)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total-price">Total: $0</p>
+      <button id="checkout-button" onclick="proceedToCheckout()">Proceed to Checkout</button>
+    </section>
+
+    <section id="billing-info" class="hidden">
+      <h2>Billing Information</h2>
+      <form id="billing-form" onsubmit="submitOrder(event)">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+    
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+    
+        <!-- Payment Method Selection -->
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" onchange="togglePaymentFields()" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="cod">Cash on Delivery (COD)</option>
+        </select>
+    
+        <!-- Credit Card Fields -->
+        <div id="credit-card-fields">
+          <label for="card">Card Number:</label>
+          <input type="text" id="card" name="card" minlength="16" maxlength="16">
+    
+          <label for="expiry">Expiry Date:</label>
+          <input type="month" id="expiry" name="expiry">
+    
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" minlength="3" maxlength="3">
+        </div>
+    
+        <button type="submit">Submit Payment</button>
+      </form>
+    </section> 
+
+    <section id="order-confirmation" class="hidden">
+      <h2>Order Confirmation</h2>
+      <p id="confirmation-message"></p>
+      <button onclick="clearOrder()">Clear Order</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class = "top">
+      <a href = "#o"><i class='bx bx-caret-up-circle bx-flip-horizontal bx-tada'></i></a>
+  </div>
+    <center><p>&copy; 2024 GPU Store. All rights reserved.</p></center>
+  </footer>
+
+  <script src="gpu.js"></script>
+</body>
+</html>
